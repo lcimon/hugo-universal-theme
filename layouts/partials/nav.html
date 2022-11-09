@@ -4,7 +4,8 @@
             <div class="navbar-header">
                 <a class="navbar-brand home" href="{{ "/" | relLangURL }}">
                     {{ if default false .Site.Params.disabled_logo }}
-                      <h4>{{ .Site.Params.logo_text }}</h4>
+                      <h3>{{ .Site.Params.logo_text }}</h3>
+                      <small>{{ .Site.Params.logo_subtext }}</small>
                     {{ else }}
                       <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Title }} logo" class="hidden-xs hidden-sm" />
                       <img src="{{ .Site.Params.logo_small | relURL }}" alt="{{ .Title }} logo" class="visible-xs visible-sm" />
