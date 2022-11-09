@@ -11,3 +11,35 @@
 .box-simple {
   min-height: 230px;
 }
+
+#post-title h1 {
+  margin-bottom:5px; 
+}
+
+.navbar-header, .navbar-brand > h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*
+ * Images
+ */
+
+figure {
+  margin: 1em 40px;
+  max-width: 100%;
+}
+
+figure > * {
+  max-width: inherit;
+}
+
+.thumbnail {
+  width: 200px;
+  height: 200px;
+  border:none;
+}
+
+.center {
+  text-align: center
+}
