@@ -1,3 +1,5 @@
+{{ if isset .Site.Params "footer" }}
+{{ if .Site.Params.footer.enable }}
 <footer id="footer">
     <div class="container">
 
@@ -61,7 +63,8 @@
     </div>
     <!-- /.container -->
 </footer>
-
+{{ end }}
+{{ end }}
 <!-- /#footer -->
 
 <!-- *** FOOTER END *** -->
