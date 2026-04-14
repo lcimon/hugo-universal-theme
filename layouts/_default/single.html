@@ -31,7 +31,7 @@
                         {{ if or .Params.author .Params.date }}
                           <p class="text-muted mb-small text-left">
                             {{ if isset .Params "authors" }}
-			      {{ i18n "authorBy" }} {{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<a href="{{ (printf "%s/%s" ("authors" | relLangURL) ($author | urlize)) }}">{{ $author }},</a>{{ end }}
+		      {{ i18n "authorBy" }} {{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<a href="{{ (printf "%s/%s" ("authors" | relLangURL) ($author | urlize)) }}">{{ $author }},</a>{{ end }}
                             {{ end }}
                             {{ if and .Params.author .Params.date }} | {{ end }}
                             {{ if .Params.date }}
@@ -49,7 +49,7 @@
                           {{ .Content }}
                         </div>
                         <!-- /#post-content -->
-                        {{ if .Site.DisqusShortname }}
+                        {{ if .Site.Config.Services.Disqus.Shortname }}
                         <div id="comments">
                             {{ template "_internal/disqus.html" . }}
                         </div>
